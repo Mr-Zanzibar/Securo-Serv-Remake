@@ -2,6 +2,6 @@
 the "faithful2 copy of the SecuroServ site of GTA 5 online made in html!
 
 <div align="center">
-  <img src="percorso_dell_immagine" alt="SecuroServ">
+  <img src="[/Securo-Serv-Remake/blob/main/Mp_securoserv_000.jpg](https://github.com/Mr-Zanzibar/Securo-Serv-Remake/blob/main/Mp_securoserv_000.jpg)" alt="SecuroServ">
 </div>
 
