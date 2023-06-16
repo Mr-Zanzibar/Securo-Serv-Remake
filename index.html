@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SecuroServ Login</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding-top: 200px;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            font-size: 40px;
+        }
+        
+        .login-box {
+            display: inline-block;
+            background-color: #111;
+            border: 2px solid #555;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .login-box::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: calc(50% - 20px);
+            width: 40px;
+            height: 40px;
+            background-color: #ff0000;
+            transform: rotate(45deg);
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .input-group input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+        }
+        
+        .login-btn {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .login-btn:hover {
+            background-color: #dc0000;
+        }
+        
+        .welcome-message {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        
+        .submenu {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .submenu a {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        
+        .submenu a:hover {
+            background-color: #dc0000;
+        }
+    </style>
+    <script>
+        function login() {
+            var usernameInput = document.getElementById("username");
+            var welcomeMessage = document.getElementById("welcome-message");
+            welcomeMessage.innerHTML = "Benvenuto, " + usernameInput.value + "!";
+            
+            var loginSection = document.getElementsByClassName("login-box")[0];
+            loginSection.style.display = "none";
+            
+            var welcomeSection = document.getElementById("welcome-section");
+            welcomeSection.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login-box">
+        <h1>SecuroServ</h1>
+        <img src="https://static.wikia.nocookie.net/degta/images/7/74/Mp_securoserv_000.png" alt="Piramide" style="height: 80px; width: 80px;">
+        <form onsubmit="event.preventDefault(); login()">
+            <div class="input-group">
+                <label for="username">User Name:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button class="login-btn" type="submit">LOGIN</button>
+        </form>
+    </div>
+    
+    <div id="welcome-section" style="display: none;">
+        <p class="welcome-message" id="welcome-message"></p>
+        <div class="submenu">
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">SPECIAL CARGO</a>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">VEHICLE CARGO</a>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">SPECIAL VEHICLE WORK</a>
+        </div>
+    </div>
+</body>
+
+</html>
